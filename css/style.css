@@ -575,7 +575,6 @@ section .container .col {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2rem;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
@@ -631,6 +630,10 @@ section .container .col .card p span {
 section .container .col .card img {
   width: 100%;
 }
+section .container .d-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 section .container .bottom-action {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -647,7 +650,203 @@ section .container .bottom-action {
       -ms-grid-row-align: stretch;
       align-self: stretch;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 5rem 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
+  }
+  section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
+  }
+  section .container .top p {
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  section .container .top h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  section .container .top .subtitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0rem 2.5rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 0.625rem;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+  section .container button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem 3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.5rem;
+    border-radius: 3.3125rem;
+    background: #F3BB4E;
+    -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  section .container button.btn-line {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0.75rem 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.5rem;
+    border-radius: 3.3125rem;
+    border: 2px solid #F3BB4E;
+    background: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-style: normal;
+  }
+  section .container .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  section .container .col {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+  section .container .col .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1.5rem 0rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    border-radius: 1rem;
+    background: #FFF;
+    width: calc((100% - 32px) / 3);
+  }
+  section .container .col .card i {
+    width: 6.25rem;
+    height: 6.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 5rem;
+  }
+  section .container .col .card .title {
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  section .container .col .card p {
+    padding: 0rem 1.5rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.3125rem;
+  }
+  section .container .col .card p span {
+    color: rgba(128, 128, 128, 0.5);
+  }
+  section .container .col .card img {
+    width: 100%;
+  }
+  section .container .bottom-action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2rem 0rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.625rem;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+}
+@media screen and (min-width: 1200px) {
   section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -761,13 +960,12 @@ section .container .bottom-action {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 2rem;
     -ms-flex-item-align: stretch;
         -ms-grid-row-align: stretch;
         align-self: stretch;
@@ -790,6 +988,15 @@ section .container .bottom-action {
         align-self: stretch;
     border-radius: 1rem;
     background: #FFF;
+    display: flex;
+    padding: 1.5rem 0rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    align-self: stretch;
+    border-radius: 1rem;
+    background: #FFF;
+    width: calc((100% - 64px) / 3);
   }
   section .container .col .card i {
     width: 6.25rem;
@@ -846,6 +1053,26 @@ section .container .bottom-action {
 
 .p-t-0 {
   padding-top: 0 !important;
+}
+
+.g-s {
+  gap: 2rem;
+}
+.g-m {
+  gap: 1rem;
+}
+.g-l {
+  gap: 2rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .g-s {
+    gap: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .g-s {
+    gap: 2rem;
+  }
 }
 
 .sha-s {
