@@ -98,6 +98,7 @@ header {
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: 100;
 }
 header .container {
   display: -webkit-box;
@@ -468,6 +469,7 @@ section {
       align-self: stretch;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 section .container {
   display: -webkit-box;
@@ -481,6 +483,7 @@ section .container {
       -ms-flex-align: center;
           align-items: center;
   gap: 1.5rem;
+  width: 100%;
 }
 section .container .top {
   display: -webkit-box;
@@ -500,10 +503,8 @@ section .container .top {
 }
 section .container .top p {
   text-align: center;
-  font-size: 1rem;
   font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  line-height: 1.8125rem;
 }
 section .container .top h1 {
   text-align: center;
@@ -511,6 +512,9 @@ section .container .top h1 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+section .container .top img {
+  width: 100%;
 }
 section .container button {
   display: -webkit-box;
@@ -569,15 +573,10 @@ section .container .col {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
+  line-height: 1.8125rem;
 }
 section .container .col .card {
   display: -webkit-box;
@@ -627,8 +626,53 @@ section .container .col .card p {
 section .container .col .card p span {
   color: rgba(128, 128, 128, 0.5);
 }
-section .container .col .card img {
+section .container .col img {
   width: 100%;
+}
+section .container ul, section .container ol {
+  padding: 0 1rem;
+  line-height: 1.8125rem;
+}
+section .container ul li, section .container ol li {
+  list-style: initial;
+}
+section .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 2rem;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  section .container .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section .container .row .col {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section .container .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section .container .row .col {
+    width: 50%;
+  }
 }
 section .container .d-wrap {
   -ms-flex-wrap: wrap;
@@ -680,9 +724,7 @@ section .container .bottom-action {
   }
   section .container .top p {
     text-align: center;
-    font-size: 1.25rem;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
   }
   section .container .top h1 {
@@ -704,6 +746,7 @@ section .container .bottom-action {
     -ms-flex-item-align: stretch;
         -ms-grid-row-align: stretch;
         align-self: stretch;
+    line-height: 2.3125rem;
   }
   section .container button {
     display: -webkit-box;
@@ -764,15 +807,12 @@ section .container .bottom-action {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -ms-flex-item-align: stretch;
         -ms-grid-row-align: stretch;
         align-self: stretch;
+    line-height: 2.3125rem;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
   }
   section .container .col .card {
     display: -webkit-box;
@@ -818,16 +858,21 @@ section .container .bottom-action {
   section .container .col .card p {
     padding: 0rem 1.5rem;
     text-align: center;
-    font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 2.3125rem;
   }
   section .container .col .card p span {
     color: rgba(128, 128, 128, 0.5);
   }
   section .container .col .card img {
     width: 100%;
+  }
+  section .container ul, section .container ol {
+    padding: 0 1rem;
+    line-height: 2.3125rem;
+  }
+  section .container ul li, section .container ol li {
+    list-style: initial;
   }
   section .container .bottom-action {
     display: -webkit-box;
@@ -860,6 +905,7 @@ section .container .bottom-action {
         -ms-flex-align: center;
             align-items: center;
     gap: 3rem;
+    line-height: 2.3125rem;
   }
   section .container {
     display: -webkit-box;
@@ -876,10 +922,9 @@ section .container .bottom-action {
   }
   section .container .top p {
     text-align: center;
-    font-size: 1.5rem;
     font-style: normal;
-    font-weight: 400;
     line-height: normal;
+    line-height: 2.3125rem;
   }
   section .container .top h1 {
     text-align: center;
@@ -960,15 +1005,12 @@ section .container .bottom-action {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -ms-flex-item-align: stretch;
         -ms-grid-row-align: stretch;
         align-self: stretch;
+    line-height: 2.3125rem;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
   }
   section .container .col .card {
     display: -webkit-box;
@@ -1033,6 +1075,13 @@ section .container .bottom-action {
   section .container .col .card img {
     width: 100%;
   }
+  section .container ul, section .container ol {
+    padding: 0 1rem;
+    line-height: 2.3125rem;
+  }
+  section .container ul li, section .container ol li {
+    list-style: initial;
+  }
   section .container .bottom-action {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1075,6 +1124,29 @@ section .container .bottom-action {
   }
 }
 
+.m-t-m {
+  margin-top: 1rem;
+}
+.m-b-m {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .m-t-m {
+    margin-top: 1rem;
+  }
+  .m-b-m {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .m-t-m {
+    margin-top: 3rem;
+  }
+  .m-b-m {
+    margin-bottom: 3rem;
+  }
+}
+
 .sha-s {
   -webkit-box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
@@ -1082,4 +1154,97 @@ section .container .bottom-action {
 
 .line-s {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.fz-m {
+  font-size: 1rem;
+}
+.fz-l {
+  font-size: 1.25rem;
+}
+.fz-xl {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .fz-m {
+    font-size: 1.5rem;
+  }
+  .fz-l {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .fz-m {
+    font-size: 1.5rem;
+  }
+  .fz-l {
+    font-size: 2.5rem;
+  }
+}
+
+.txt-l {
+  text-align: left;
+}
+.txt-c {
+  text-align: center;
+}
+
+.txCor-gr {
+  color: #A7A7A7;
+}
+
+.b-l {
+  font-weight: 700;
+}
+
+.bor-b::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  bottom: 0;
+  background-color: #D9D9D9;
+}
+@media screen and (min-width: 1200px) {
+  .bor-b::after {
+    width: 100%;
+  }
+}
+
+img {
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+  img {
+    border-radius: 16px;
+  }
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.d-flex-jc {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.d-flex-ai {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.d-flex-ai-fst {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.d-col {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
 }
