@@ -3,7 +3,6 @@
 // @media screen and (min-width:1200px) {}
 
 * {
-    color: #1F1F1F;
     box-sizing: border-box;
     font-family: Microsoft JhengHei;
 }
@@ -27,8 +26,7 @@ header {
         box-sizing: border-box;
 
         position: fixed;
-
-        border-radius: 0rem 0rem 0.5rem 0.5rem;
+        
         background: #1F1F1F;
 
         .logo {
@@ -63,10 +61,11 @@ header {
 
                 li {
                     color: white;
+                    padding: 1rem
                 }
             }
 
-            button {
+            .button {
                 display: flex;
                 padding: 0.75rem 1.5rem;
                 align-items: center;
@@ -84,7 +83,7 @@ header {
             width: 100%;
             box-sizing: border-box;
 
-            margin: 1.5rem auto;
+            // margin: 1.5rem auto;
             right: 0;
             left: 0;
             max-width: 1200px;
@@ -109,6 +108,7 @@ header {
 
             .right {
                 display: flex;
+                gap: 1.5rem;
             }
         }
 
@@ -143,6 +143,7 @@ header {
 
             .right {
                 display: flex;
+                gap: 1.5rem;
             }
         }
     }
@@ -193,7 +194,7 @@ footer {
             }
         }
 
-        button {
+        .button {
             display: flex;
             padding: 0.75rem 2rem;
             align-items: center;
@@ -299,7 +300,7 @@ footer {
 }
 
 main {
-    padding-top: 3.5rem;
+    padding-top: 4.5rem;
 
     @media screen and (min-width:600px) {
         padding-top: 6.75rem;
@@ -316,6 +317,7 @@ section {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    color: #1F1F1F;
 
     .container {
         display: flex;
@@ -351,7 +353,7 @@ section {
             }
         }
 
-        button {
+        .button {
             display: flex;
             padding: 1rem 3rem;
             align-items: center;
@@ -449,14 +451,27 @@ section {
             }
         }
 
-        ul,ol {
-                padding: 0 1rem;
-                line-height: 1.8125rem;
+        .col-4 {
+            width: 100%;
 
-                li {
-                    list-style: initial;
-                }
+            @media screen and (min-width:600px) and (max-width:1200px) {
+                width: 40%;
             }
+
+            @media screen and (min-width:1200px) {
+                width: 40%;
+            }
+        }
+
+        ul,
+        ol {
+            padding: 0 1rem;
+            line-height: 1.8125rem;
+
+            li {
+                list-style: initial;
+            }
+        }
 
         .row {
             display: flex;
@@ -536,7 +551,7 @@ section {
                 }
             }
 
-            button {
+            .button {
                 display: flex;
                 padding: 1rem 3rem;
                 align-items: center;
@@ -638,7 +653,8 @@ section {
                 }
             }
 
-            ul,ol {
+            ul,
+            ol {
                 padding: 0 1rem;
                 line-height: 2.3125rem;
 
@@ -699,7 +715,7 @@ section {
                 }
             }
 
-            button {
+            .button {
                 display: flex;
                 padding: 1rem 3rem;
                 align-items: center;
@@ -820,7 +836,8 @@ section {
                 }
             }
 
-            ul,ol {
+            ul,
+            ol {
                 padding: 0 1rem;
                 line-height: 2.3125rem;
 
@@ -848,6 +865,10 @@ section {
 }
 
 .g- {
+    &xs {
+        gap: 1.5rem;
+    }
+
     &s {
         gap: 2rem;
     }
@@ -870,6 +891,10 @@ section {
         &s {
             gap: 2rem;
         }
+
+        &xs {
+            gap: 2rem;
+        }
     }
 }
 
@@ -881,6 +906,14 @@ section {
     &t- {
         &m {
             margin-top: 1rem;
+        }
+
+        &l {
+            margin-top: 2rem;
+        }
+
+        &xl {
+            margin-top: 3rem;
         }
     }
 
@@ -918,11 +951,16 @@ section {
         }
     }
 }
+
 // Margin END
 
 
 // Shadow START
 .sha {
+    &-n {
+        box-shadow: none;
+    }
+
     &-s {
         box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
     }
@@ -1016,6 +1054,12 @@ img {
     }
 }
 
+.btn-l {
+    border: 2px solid #F3BB4E;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
 // Decorate END
 
 
@@ -1038,6 +1082,28 @@ img {
 
 .d-col {
     flex-direction: column !important;
+
+    @media screen and (min-width:600px) and (max-width:1200px) {
+        &-rev {
+            flex-direction: row-reverse !important;
+        }
+    }
+
+    @media screen and (min-width:1200px) {
+        &-rev {
+            flex-direction: row-reverse !important;
+        }
+    }
+
+}
+
+.d-grow {
+    flex-grow: 1;
+}
+
+.w-fit {
+    width: fit-content;
+    display: flex;
 }
 
 // Flex END

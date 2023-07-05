@@ -12,25 +12,55 @@
 
 <body>
 	<!-- Header START -->
-	<header>
-		<div class="container">
-			<div class="logo">
-				<img src="./img/Logo.svg" alt="">
-				HSU YU CHE
-			</div>
-			<div class="btn">
-				<img src="./img/icon/3 line.svg" alt="">
-			</div>
-			<div class="right">
-				<div class="nav">
-					<li>首頁</li>
-					<li>專案作品</li>
-					<li>關於我</li>
+	<header class="main-header">
+        <div class="desktop-header container">
+            <div class="top-nav">
+                <a href="" class="main-logo">
+                    <img src="./img/Logo.svg" alt="logo">
+					HSU YU CHE
+                </a>
+                <button class="toggle-menu" id="modal-toggle-btn">
+                    <i></i><i></i><i></i>
+                </button>
+				<div class="right">
+					<ul class="desk-menu">
+						<li class="col topic-area">
+							<a href="./index.html" class="">首頁</a>
+						</li>
+						<li class="col topic-area">
+							<a href="./prjects.html" class="">專案列表</a>
+						</li>
+						<li class="col topic-area">
+							<a href="./about.html" class="">關於我</a>
+						</li>
+					</ul>
+					<a class="button" href="mailto:superpmt2@gmail.com">
+						<span>聯絡我</span>
+					</a>
 				</div>
-				<button>聯絡我</button>
-			</div>
-		</div>
-	</header>
+				
+            </div>
+        </div>
+        <div class="modal-menu">
+            <div class="container">
+                <ul class="columns">
+                    <li class="col topic-area">
+                        <a href="./index.html" class="">首頁</a>
+					</li>
+					<li class="col topic-area">
+                        <a href="./prjects.html" class="">專案列表</a>
+					</li>
+					<li class="col topic-area">
+                        <a href="./about.html" class="">關於我</a>
+					</li>
+					<a class="button m-t-xl" href="mailto:superpmt2@gmail.com">
+						<img src="./img/icon/message.svg" alt="message">
+						<span>聯絡我</span>
+					</a>
+                </ul>
+            </div>
+        </div>
+    </header>
 	<!-- Header END -->
 
 	<!-- Content START -->
@@ -40,24 +70,23 @@
 			<div class="container">
 				<div class="title">專案作品</div>
 				<div class="col d-wrap g-s">
-					<div class="card p-t-0 sha-s">
+					<a class="card p-t-0 sha-s" href="./Detail-1.html">
 						<img src="./img/cover/img-1.png" alt="">
 						<p class="title">一品多價商品和訂單呈現</p>
-					</div>
-					<div class="card p-t-0 sha-s">
+					</a>
+					<a class="card p-t-0 sha-s" href="./Detail-2.html">
 						<img src="./img/cover/img-2.png" alt="">
 						<p class="title">銀行登記機制頁</p>
-					</div>
-					<div class="card p-t-0 sha-s">
+					</a>
+					<a class="card p-t-0 sha-s" href="./Detail-3.html">
 						<img src="./img/cover/img-3.png" alt="">
 						<p class="title">文末導購購物車樣式更新</p>
-					</div>
-					<div class="card p-t-0 sha-s">
+					</a>
+					<a class="card p-t-0 sha-s" href="./Detail-4.html">
 						<img src="./img/cover/img-4.png" alt="">
 						<p class="title">一品多價商品和訂單呈現</p>
-					</div>
+					</a>
 				</div>
-				
 			</div>
 		</section>
 		<!-- Projects List END -->
@@ -73,15 +102,25 @@
 					<p>若你正需要一位UI/UX設計師，歡迎您聯絡我，給我一個機會，為您的產品變得更有趣，更友善，讓我們一起為使用者帶來意想不到的體驗。</p>
 				</div>
 			</div>
-			<button>
+			<a class="button" href="mailto:superpmt2@gmail.com">
 				馬上跟我聯絡
-			</button>
+			</a>
 			<div class="social">
-				<li><img src="./img/icon/social/white/Linkedin.svg" alt="Linkedin"></li>
-				<li><img src="./img/icon/social/white/yourator.svg" alt="Yourator"></li>
-				<li><img src="./img/icon/social/white/indeed.svg" alt="Indeed"></li>
-				<li><img src="./img/icon/social/white/cakeresume.svg" alt="Cakeresume"></li>
-				<li><img src="./img/icon/social/white/f_logo_RGB-White_1024 1.png" alt="Facebook"></li>
+				<a href="https://www.linkedin.com/in/hsu-yu-che/" target="_blank">
+					<li><img src="./img/icon/social/white/Linkedin.svg" alt="Linkedin"></li>
+				</a>
+				<a href="https://www.yourator.co/resumes/11cd3402f8ab83ee55022a8fa69a6299/edit" target="_blank">
+					<li><img src="./img/icon/social/white/yourator.svg" alt="Yourator"></li>
+				</a>
+				<a href="https://profile.indeed.com/p/5gqbbn3" target="_blank">
+					<li><img src="./img/icon/social/white/indeed.svg" alt="Indeed"></li>
+				</a>
+				<a href="https://www.cakeresume.com/s--AJMD6zQStu-IJ1vRnHuKiw--/superpmt2" target="_blank">
+					<li><img src="./img/icon/social/white/cakeresume.svg" alt="Cakeresume"></li>
+				</a>
+				<a href="https://www.facebook.com/yuchehsu" target="_blank">
+					<li><img src="./img/icon/social/white/f_logo_RGB-White_1024 1.png" alt="Facebook"></li>
+				</a>
 			</div>
 		</div>
 		<div class="copyright">
@@ -90,6 +129,16 @@
 	</footer>
 	<!-- Footer END -->
 
+	<!-- script START -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script>
+		$("#modal-toggle-btn").click(function (e) {
+			e.preventDefault();
+			$(".main-header").toggleClass("is-open");
+			$(this).toggleClass("is-active");
+		});
+	</script>
+	<!-- script END -->
 </body>
-
 </html>
