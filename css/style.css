@@ -85,7 +85,7 @@ Button {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Microsoft JhengHei;
+  font-family: Microsoft JhengHei, Alegreya Sans;
 }
 
 body {
