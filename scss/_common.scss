@@ -224,6 +224,12 @@ footer {
             gap: 0.625rem;
             align-self: stretch;
         }
+
+        .note {
+            p {
+                margin-bottom: 8px;
+            }
+        }
     }
 
     .copyright {
@@ -1026,6 +1032,14 @@ section {
     &gr {
         color: #A7A7A7;
     }
+
+    &wh {
+        color: white;
+    }
+}
+
+.txt-h {
+    line-height: 1.8125rem;
 }
 
 .b {

@@ -347,6 +347,9 @@ footer .foot .social {
       -ms-grid-row-align: stretch;
       align-self: stretch;
 }
+footer .foot .note p {
+  margin-bottom: 8px;
+}
 footer .copyright {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1238,6 +1241,13 @@ section .container .bottom-action {
 
 .txCor-gr {
   color: #A7A7A7;
+}
+.txCor-wh {
+  color: white;
+}
+
+.txt-h {
+  line-height: 1.8125rem;
 }
 
 .b-l {
