@@ -503,6 +503,7 @@ section {
 
                 .col {
                     width: 50%;
+                    flex-direction: column;
                 }
             }
         }
@@ -928,10 +929,26 @@ section {
     }
 
     &b- {
+        &s {
+            margin-bottom: 0.5rem;
+        }
+
         &m {
             margin-bottom: 1rem;
         }
     }
+
+    &r- {
+        &m {
+            margin-right: 1.5rem;
+        }
+
+        &l {
+            margin-right: 2rem;
+        }
+    }
+
+    
 
     @media screen and (min-width:600px) and (max-width:1200px) {
         &t- {

@@ -702,6 +702,10 @@ section .container .row {
   }
   section .container .row .col {
     width: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 section .container .d-wrap {
@@ -1173,8 +1177,17 @@ section .container .bottom-action {
 .m-t-xl {
   margin-top: 3rem;
 }
+.m-b-s {
+  margin-bottom: 0.5rem;
+}
 .m-b-m {
   margin-bottom: 1rem;
+}
+.m-r-m {
+  margin-right: 1.5rem;
+}
+.m-r-l {
+  margin-right: 2rem;
 }
 @media screen and (min-width: 600px) and (max-width: 1200px) {
   .m-t-m {
